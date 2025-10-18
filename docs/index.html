@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theme managment</title>
+	
+	<!-- Importat peaces for the theme to work -->
+	<script src="https://cdn.jsdelivr.net/gh/feraxjs/thselector@v0.1.0/src/core.js"></script>
+	
+	<!-- Optional peaces for the theme to work -->
+	<script src="https://cdn.jsdelivr.net/gh/feraxjs/thselector@v0.1.0/src/components/dropdown.js" defer></script> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/feraxjs/themes@v0.1.0/catppuccin/light/latte.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/feraxjs/themes@v0.1.0/catppuccin/dark/mocha.css">
+	<!-- Close -->
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@catppuccin/highlightjs@1.0.1/css/catppuccin-variables.css">
+	<script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked-highlight/lib/index.umd.js"></script>
+	<script src="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/highlight.min.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <section>
+    <h1>Theme Selector <em>demo</em></h1>
+	<select id="fth-select" class="theme"></select> <!-- Theme selector (component) -->
+    </section>
+    
+    <section class="text">
+        <div id="content" class="markdown-body">
+            <div class="loader"></div>
+        </div>
+    </section>
+</body>
+</html>
