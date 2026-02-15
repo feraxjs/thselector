@@ -1,0 +1,13 @@
+{
+    "main": "main.js",
+    "type": "module",
+    "scripts": {
+        "dev": "vite"
+    },
+    "dependencies": {
+        "@feraxjs/thselector": "link:.."
+    },
+    "devDependencies": {
+        "vite": "^6.1.1"
+    }
+}

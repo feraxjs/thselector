@@ -1,0 +1,37 @@
+{
+  "name": "@feraxjs/thselector",
+  "version": "1.0.0",
+  "description": "The simplest way to add theme management to your HTML. Easy to configure and set up.",
+  "author": "feraxhp",
+  "license": "MIT",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -fr dist && rollup -c",
+    "build:prod": "rm -fr dist && NODE_ENV=production rollup -c",
+    "prepublishOnly": "pnpm run build:prod"
+  },
+  "keywords": [
+    "theme",
+    "dark-mode",
+    "light-mode",
+    "system-theme",
+    "javascript"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^2.79.2"
+  },
+  "dependencies": {
+    "@rollup/plugin-replace": "^6.0.3"
+  }
+}
