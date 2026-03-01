@@ -1,5 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import dts from 'rollup-plugin-dts';
 import terser from '@rollup/plugin-terser';
 import replace from '@rollup/plugin-replace';
 import fs from 'fs';
@@ -38,6 +39,23 @@ export default [
       commonjs(),
       replace(replace_options),
     ].filter(Boolean),
+  },
+  {
+    input: 'src/index.js',
+    output: [
+      {
+        file: 'dist/index.d.ts',
+        format: 'es',
+        name: 'thselector',
+        sourcemap: true,
+      }
+    ],
+    plugins: [
+      nodeResolve(),
+      commonjs(),
+      replace(replace_options),
+      dts()
+    ],
   },
   {
     input: 'src/index.js',
