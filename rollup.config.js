@@ -41,13 +41,12 @@ export default [
     ].filter(Boolean),
   },
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: [
       {
         file: 'dist/index.d.ts',
         format: 'es',
         name: 'thselector',
-        sourcemap: true,
       }
     ],
     plugins: [
